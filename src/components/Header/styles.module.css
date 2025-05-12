@@ -1,16 +1,109 @@
 .header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   padding: 12px 24px;
   background-color: #ffffff;
-  border-bottom: 1px solid #f2f4f5;
-  flex-direction: column;
+  border-bottom: 3px solid #f2f4f5;
   gap: 12px;
   color: #000000;
 }
 .title {
   font-size: 28px;
+  font-weight: 600;
 }
 .date {
   font-size: 16px;
+  font-weight: 600;
+}
+.dark {
+  background-color: #000000;
+  border-bottom: 2px solid #ffffff;
+}
+.light {
+  background-color: #ffffff;
+}
+.light .changeTheme {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 25px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  box-shadow: 0 3px 0 #7a8182;
+}
+.light .changeTheme:hover {
+  transition: 0.5s;
+  background-color: #000000;
+  color: #ffffff;
+}
+.light .changeTheme:active {
+  top: 4px;
+  box-shadow: none;
+}
+.dark .changeTheme {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 25px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 50px;
+  background-color: #000000;
+  border: 3px solid #000000;
+  box-shadow: 0 3px 0 #7a8182;
+}
+.dark .changeTheme:hover {
+  transition: 0.5s;
+  background-color: #ffffff;
+  color: #000000;
+}
+.dark .changeTheme:active {
+  top: 4px;
+  box-shadow: none;
+}
+@media (max-width: 695px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 12px;
+
+    gap: 15px;
+  }
+  .changeTheme {
+    margin-bottom: 15px;
+  }
+  .title,
+  .date {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
+@media (min-width: 696px) {
+  .header {
+    padding: 5px 40px;
+  }
+  .title {
+    font-size: 45px;
+  }
+  .date,
+  .changeTheme {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1220px) {
+  .header {
+    padding: 5px 300px;
+  }
 }

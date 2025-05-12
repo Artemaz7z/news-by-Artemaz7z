@@ -4,10 +4,42 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
-  font-family: "Inter", "sans-serif";
+  font-family: "Montserrat";
 }
 /* Обнуляющие стили */
-.container {
-  padding: 24px;
+.app {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+  margin: 0;
+}
+.container {
+  flex: 1;
+  padding: 24px;
+}
+@media (min-width: 696px) {
+  .container {
+    padding: 24px 40px;
+  }
+}
+@media (min-width: 1220px) {
+  .container {
+    padding: 24px 80px;
+  }
+}
+.app.dark .container {
+  background-color: #000000;
+}
+.app.light .container {
+  background-color: #ffffff;
+}
+.app.dark p,
+.app.dark h3,
+.app.dark h1 {
+  color: #ffffff;
+}
+.app.light p,
+.app.light h3,
+.app.light h1 {
+  color: #000000;
 }
